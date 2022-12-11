@@ -48,7 +48,7 @@ function SignForm({ submitType }: { submitType: string }) {
             onChange={(e) => setEmail(e.target.value)}
             className="border"
           />
-          <div>
+          <div className="text-slate-500">
             {emailValid || "이메일 형식을 맞춰주세요. (someone@example.com)"}
           </div>
         </div>
@@ -60,7 +60,9 @@ function SignForm({ submitType }: { submitType: string }) {
             onChange={(e) => setPassword(e.target.value)}
             className="border"
           />
-          <div>{passwordValid || "비밀번호는 8글자 이상이어야 합니다."}</div>
+          <div className="text-slate-500">
+            {passwordValid || "비밀번호는 8글자 이상이어야 합니다."}
+          </div>
         </div>
         <Button
           text={submitType}

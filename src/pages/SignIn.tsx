@@ -18,7 +18,9 @@ function SignIn() {
     <div className="flex flex-col w-full h-full items-center justify-center">
       <Title text="로그인 후 이용하세요." />
       <SignForm submitType={"로그인"} />
-      <Link to="/signup">회원가입</Link>
+      <div className="flex justify-center bg-white fixed bottom-0 w-full">
+        <Link to="/signup">회원가입</Link>
+      </div>
     </div>
   );
 }

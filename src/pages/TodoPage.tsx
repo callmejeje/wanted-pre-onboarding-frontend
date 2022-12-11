@@ -28,11 +28,17 @@ function TodoPage() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center w-full p-2">
-      {isLogin && <button onClick={() => logout(setIsLogin)}>로그아웃</button>}
-      <Title text="To Do List" />
-      <TodoInput getTodoList={getTodoList} />
-      <TodoList todoList={todoList} getTodoList={getTodoList} />
+    <div className="flex flex-col items-center w-full h-full p-2 justify-between">
+      <div className="flex flex-col items-center w-full">
+        <Title text="To Do List" />
+        <TodoInput getTodoList={getTodoList} />
+        <TodoList todoList={todoList} getTodoList={getTodoList} />
+      </div>
+      {isLogin && (
+        <div className="flex justify-center bg-white fixed bottom-0 w-full">
+          <button onClick={() => logout(setIsLogin)}>로그아웃</button>
+        </div>
+      )}
     </div>
   );
 }
