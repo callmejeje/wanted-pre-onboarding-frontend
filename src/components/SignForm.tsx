@@ -40,7 +40,7 @@ function SignForm({ submitType }: { submitType: string }) {
 
   return (
     <div className="flex flex-col w-full h-full items-center justify-center w-full">
-      <form className="flex flex-col w-[400px]">
+      <form className="flex flex-col w-full px-28">
         <div className="flex flex-col w-full">
           <input
             placeholder="이메일"

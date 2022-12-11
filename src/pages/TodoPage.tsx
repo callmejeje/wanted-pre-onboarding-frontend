@@ -28,7 +28,7 @@ function TodoPage() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-full p-2">
       {isLogin && <button onClick={() => logout(setIsLogin)}>로그아웃</button>}
       <Title text="To Do List" />
       <TodoInput getTodoList={getTodoList} />
