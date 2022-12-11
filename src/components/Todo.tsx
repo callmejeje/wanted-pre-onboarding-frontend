@@ -54,7 +54,7 @@ function Todo({
           <span
             className={`${
               todo.isCompleted && "line-through text-slate-500"
-            } mx-2 w-full`}
+            } mx-2 w-full py-2`}
           >
             {todo.todo}
           </span>

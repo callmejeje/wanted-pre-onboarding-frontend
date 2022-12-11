@@ -57,7 +57,7 @@ function SignForm({ submitType }: { submitType: string }) {
             placeholder="이메일"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="border"
+            className="border my-1 p-1"
           />
           <div className="text-slate-500">
             {emailValid || "이메일 형식을 맞춰주세요. (someone@example.com)"}
@@ -69,7 +69,7 @@ function SignForm({ submitType }: { submitType: string }) {
             value={password}
             type="password"
             onChange={(e) => setPassword(e.target.value)}
-            className="border"
+            className="border my-1 p-1"
           />
           <div className="text-slate-500">
             {passwordValid || "비밀번호는 8글자 이상이어야 합니다."}
@@ -81,7 +81,7 @@ function SignForm({ submitType }: { submitType: string }) {
                 value={passwordCheck}
                 type="password"
                 onChange={(e) => setPasswordCheck(e.target.value)}
-                className="border"
+                className="border my-1 p-1"
               />
               <div className="text-slate-500">
                 {passwordCheckValid || "비밀번호가 다릅니다."}

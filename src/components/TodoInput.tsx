@@ -36,11 +36,11 @@ function TodoInput({ getTodoList, todo, setIsEditing }: TodoEdit) {
     if (setIsEditing) setIsEditing(false);
   };
   return (
-    <form className="flex w-full my-1">
+    <form className="flex w-full my-1 items-center">
       <input
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        className="border w-full mx-1 px-1"
+        className="border w-full mx-1 p-1 my-[-1px]"
         placeholder={`${
           todo ? "할 일을 수정하세요." : "새로운 할 일을 입력하세요."
         }`}
