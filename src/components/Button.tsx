@@ -14,7 +14,7 @@ function Button({ text, handleClick, disabled, margin }: ButtonProps) {
       onClick={handleClick}
       className={`bg-slate-300 ${disabled || "hover:bg-slate-400"} ${
         margin && margin
-      } px-1 whitespace-pre`}
+      } px-1 whitespace-pre rounded`}
       disabled={disabled ? disabled : false}
     >
       {text}
