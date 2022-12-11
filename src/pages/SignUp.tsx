@@ -16,10 +16,14 @@ function SignUp() {
 
   return (
     <div className="flex flex-col w-full h-full items-center justify-center">
-      <Title text="회원가입 후 로그인하세요." />
+      <Title text="회원가입" />
       <SignForm submitType={"회원가입"} />
-      <div className="flex justify-center bg-white fixed bottom-0 w-full">
-        <Link to="/">로그인</Link>
+      <div className="flex justify-center bg-white fixed bottom-0 p-4 w-full">
+        <span>{"이미 회원이시면\u00A0"}</span>
+        <Link to="/" className="text-slate-500 underline">
+          로그인
+        </Link>
+        <span>하세요.</span>
       </div>
     </div>
   );

@@ -35,8 +35,13 @@ function TodoPage() {
         <TodoList todoList={todoList} getTodoList={getTodoList} />
       </div>
       {isLogin && (
-        <div className="flex justify-center bg-white fixed bottom-0 w-full">
-          <button onClick={() => logout(setIsLogin)}>로그아웃</button>
+        <div className="flex justify-center bg-white fixed bottom-0 p-4 w-full">
+          <button
+            onClick={() => logout(setIsLogin)}
+            className="text-slate-500 underline"
+          >
+            로그아웃
+          </button>
         </div>
       )}
     </div>
