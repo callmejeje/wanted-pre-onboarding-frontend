@@ -8,3 +8,8 @@ export function isValidPassword(password: string) {
   if (password.length >= 8) return true;
   else return false;
 }
+
+export function isValidPasswordCheck(password: string, passwordCheck: string) {
+  if (password === passwordCheck) return true;
+  else return false;
+}

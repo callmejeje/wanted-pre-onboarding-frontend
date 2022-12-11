@@ -6,15 +6,26 @@ import useSign from "../hooks/useSign";
 import Button from "./Button";
 
 function SignForm({ submitType }: { submitType: string }) {
-  const { email, setEmail, password, setPassword, emailValid, passwordValid } =
-    useSign();
+  const {
+    email,
+    setEmail,
+    password,
+    setPassword,
+    emailValid,
+    passwordValid,
+    passwordCheck,
+    setPasswordCheck,
+    passwordCheckValid,
+  } = useSign();
   const { setIsLogin } = useContext(Context);
   const [canSubmit, setCanSubmit] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
-    setCanSubmit(emailValid && passwordValid);
-  }, [email, emailValid, password, passwordValid]);
+    if (submitType === "회원가입")
+      setCanSubmit(emailValid && passwordValid && passwordCheckValid);
+    else setCanSubmit(emailValid && passwordValid);
+  }, [emailValid, passwordCheckValid, passwordValid, submitType]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,6 +74,20 @@ function SignForm({ submitType }: { submitType: string }) {
           <div className="text-slate-500">
             {passwordValid || "비밀번호는 8글자 이상이어야 합니다."}
           </div>
+          {submitType === "회원가입" && (
+            <div className="flex flex-col">
+              <input
+                placeholder="비밀번호 확인"
+                value={passwordCheck}
+                type="password"
+                onChange={(e) => setPasswordCheck(e.target.value)}
+                className="border"
+              />
+              <div className="text-slate-500">
+                {passwordCheckValid || "비밀번호가 다릅니다."}
+              </div>
+            </div>
+          )}
         </div>
         <Button
           text={submitType}
