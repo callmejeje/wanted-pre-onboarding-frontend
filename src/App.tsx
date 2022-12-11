@@ -8,7 +8,7 @@ function App() {
   return (
     <ContextProvider>
       <div className="w-[100vw] h-[100vh] flex justify-center">
-        <div className="w-[600px]">
+        <div className="w-[600px] h-full pt-4 pb-[56px]">
           <Routes>
             <Route path="/" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
