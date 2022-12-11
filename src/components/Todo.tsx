@@ -51,7 +51,13 @@ function Todo({
             setIsEditing={setIsEditing}
           />
         ) : (
-          <span className="mx-2 w-full">{todo.todo}</span>
+          <span
+            className={`${
+              todo.isCompleted && "line-through text-slate-500"
+            } mx-2 w-full`}
+          >
+            {todo.todo}
+          </span>
         )}
       </div>
       {isEditing || (
