@@ -93,6 +93,7 @@ function SignForm({ submitType }: { submitType: string }) {
           text={submitType}
           handleClick={handleSubmit}
           disabled={!canSubmit}
+          margin="my-2"
         />
       </form>
     </div>
