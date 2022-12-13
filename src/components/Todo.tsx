@@ -37,7 +37,7 @@ function Todo({
   };
   return (
     <li className="flex items-center justify-between w-full my-1">
-      <div className="flex w-full">
+      <div className="flex w-full items-center">
         <input
           type="checkbox"
           checked={checked}
@@ -61,7 +61,7 @@ function Todo({
         )}
       </div>
       {isEditing || (
-        <div className="flex">
+        <div className="flex items-center">
           <Button handleClick={handleEdit} text="수정" />
           <Button handleClick={handleDelete} text="삭제" margin="ml-2" />
         </div>
