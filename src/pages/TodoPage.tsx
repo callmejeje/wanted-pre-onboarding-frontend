@@ -29,7 +29,7 @@ function TodoPage() {
 
   return (
     <div className="flex flex-col items-center w-full h-full p-2 justify-between">
-      <div className="flex flex-col items-center w-full">
+      <div className="flex flex-col items-center w-full h-full">
         <Title text="To Do List" />
         <TodoInput getTodoList={getTodoList} />
         <TodoList todoList={todoList} getTodoList={getTodoList} />

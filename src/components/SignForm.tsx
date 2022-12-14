@@ -50,7 +50,7 @@ function SignForm({ submitType }: { submitType: string }) {
   };
 
   return (
-    <div className="flex flex-col w-full h-full items-center justify-center w-full">
+    <div className="flex flex-col w-full h-full items-center justify-center w-full pb-14">
       <form className="flex flex-col w-full px-28">
         <div className="flex flex-col w-full">
           <input
