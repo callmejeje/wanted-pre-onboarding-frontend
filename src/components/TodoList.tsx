@@ -29,7 +29,7 @@ function TodoList({
   }, [isCalled]);
 
   return (
-    <div className="w-full">
+    <div className="w-full pb-14">
       {todoList && (
         <ul className="w-full">
           {todoList.map((todo: TodoInterface) => (
