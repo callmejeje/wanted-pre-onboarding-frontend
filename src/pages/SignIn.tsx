@@ -15,7 +15,7 @@ function SignIn() {
   }, [isLogin]);
 
   return (
-    <div className="flex flex-col w-full h-full items-center justify-center overflow-scroll">
+    <div className="flex flex-col w-full h-full items-center justify-center">
       <Title text="로그인" />
       <SignForm submitType={"로그인"} />
       <div className="flex justify-center bg-white fixed bottom-0 p-4 w-full">
